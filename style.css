@@ -42,6 +42,8 @@ h2 {
 
 .institution-logos img {
     max-height: 75px;
+    max-width: 100%;
+    object-fit: contain;
     width: auto;
 }
 
@@ -170,8 +172,6 @@ h2 {
     transition: all 0.2s ease;
 }
 
-#copy-button:hover {}
-
 #copy-button.copied {
     background-color: var(--success-color);
     border-color: var(--success-color);
@@ -179,4 +179,51 @@ h2 {
 
 #copy-button:active .copy-icon {
     transform: scale(0.8);
+}
+
+/* Tooltip wrapper */
+.tooltip-wrapper {
+    position: relative;
+    display: inline-flex;
+    cursor: not-allowed;
+}
+
+.tooltip-wrapper .button.disabled {
+    pointer-events: none;
+}
+
+.tooltip-text {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    background-color: var(--text-main-color);
+    color: var(--background-color);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    white-space: nowrap;
+    margin-bottom: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.tooltip-text::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: var(--text-main-color) transparent transparent transparent;
+}
+
+.tooltip-wrapper:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
 }

@@ -62,18 +62,29 @@
         </header>
 
         <div class="button-container">
-            <a download class="button disabled" title="Download Paper">
-                <img src="assets/icons/pdf.svg" alt="PDF logo" class="icon button-icon">
-                <span class="button-text">Paper</span>
-            </a>
-            <a class="button disabled" title="arXiv (Coming Soon)">
-                <img src="assets/logos/arxiv.svg" alt="arXiv logo" class="icon button-icon">
-                <span class="button-text">arXiv</span>
-            </a>
-            <a class="button disabled" title="View Code">
-                <img src="assets/logos/github.svg" alt="GitHub logo" class="icon button-icon">
-                <span class="button-text">Code</span>
-            </a>
+            <div class="tooltip-wrapper">
+                <a class="button disabled">
+                    <img src="assets/icons/pdf.svg" alt="PDF logo" class="icon button-icon">
+                    <span class="button-text">Paper</span>
+                </a>
+                <span class="tooltip-text">Coming Soon</span>
+            </div>
+
+            <div class="tooltip-wrapper">
+                <a class="button disabled">
+                    <img src="assets/logos/arxiv.svg" alt="arXiv logo" class="icon button-icon">
+                    <span class="button-text">arXiv</span>
+                </a>
+                <span class="tooltip-text">Coming Soon</span>
+            </div>
+
+            <div class="tooltip-wrapper">
+                <a class="button disabled">
+                    <img src="assets/logos/github.svg" alt="GitHub logo" class="icon button-icon">
+                    <span class="button-text">Code</span>
+                </a>
+                <span class="tooltip-text">Coming Soon</span>
+            </div>
         </div>
 
         <main>
@@ -108,7 +119,6 @@
                     <pre><code id="bibtex-code">@article{blessing2026sfgros,
   title={SFG-ROS: Resource-Aware Multi-Agent Perception for Dynamic Factory Deployments},
   author={Blessing, Constantin and Geiger, Elias and H{\"a}ringer, Jakob and Grewe, Dennis and Enzweiler, Markus},
-  journal={arXiv preprint arXiv:26xx.xxxxx},
   year={2026}
 }</code></pre>
                 </div>

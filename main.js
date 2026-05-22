@@ -23,10 +23,10 @@ function copyBibTeX() {
     }
     // 2. Fallback for mobile/HTTP environments.
     else {
-        const textArea = document.createElement("textarea");
+        const textArea = document.createElement("text-area");
         textArea.value = bibtexText;
 
-        // Hide the textarea off-screen.
+        // Hide the text are off-screen.
         textArea.style.position = "absolute";
         textArea.style.left = "-999999px";
         document.body.prepend(textArea);
