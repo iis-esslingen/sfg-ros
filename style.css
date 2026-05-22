@@ -1,0 +1,181 @@
+:root {
+    --background-color: #ffffff;
+    --text-main-color: #000000;
+    --text-muted-color: #666666;
+    --button-background-color: #f0f0f0;
+    --border-color: #eaeaea;
+    --success-color: #28a745;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    line-height: 1.7;
+    color: var(--text-main-color);
+    background-color: var(--background-color);
+    padding: 4rem 1rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: var(--text-muted-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-top: 3rem;
+}
+
+.authors {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.author-item {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.orcid-link {
+    display: inline-flex;
+    margin-left: 4px;
+}
+
+.orcid-icon {
+    width: 16px;
+}
+
+.institution-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.institution-logos img {
+    max-height: 75px;
+    width: auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--button-background-color);
+    color: var(--text-main-color);
+    text-decoration: none;
+    height: 50px;
+    max-width: 50px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: max-width 0.4s, background-color 0.3s;
+    overflow: hidden;
+}
+
+.button:hover {
+    max-width: 200px;
+}
+
+.button .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    width: 50px;
+    height: 100%;
+    transform: scale(0.75);
+    transform-origin: center;
+}
+
+.button-icon {
+    height: 24px;
+    width: auto;
+}
+
+.button-text {
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease 0.1s;
+    font-size: 0.95rem;
+    padding-right: 25px;
+}
+
+.button:hover .button-text {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+.button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Container holding both elements */
+.bibtex-wrapper {
+    position: relative;
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Base style for the pre-formatted block */
+.bibtex-wrapper pre {
+    background-color: var(--button-background-color);
+    padding: 16px 50px 16px 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+    margin: 0;
+}
+
+.bibtex-wrapper code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9rem;
+    color: var(--text-muted-color);
+    line-height: 1.45;
+}
+
+#copy-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+#copy-button:hover {}
+
+#copy-button.copied {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+
+#copy-button:active .copy-icon {
+    transform: scale(0.8);
+}

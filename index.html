@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFG-ROS: Resource-Aware Multi-Agent Perception</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="institution-logos">
+            <img src="assets/logos/hse.png" alt="Esslingen University of Applied Sciences">
+            <img src="assets/logos/iis.png" alt="Institute for Intelligent Systems">
+        </div>
+
+        <header>
+            <h1>SFG-ROS: Resource-Aware Multi-Agent Perception for Dynamic Factory Deployments</h1>
+            <div class="authors">
+                <span class="author-item">
+                    <strong>Constantin Blessing</strong><a href="https://orcid.org/0009-0005-8516-0269" target="_blank"
+                        class="orcid-link"><img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg"
+                            alt="ORCID iD" class="orcid-icon"></a>
+                </span>,
+                <span class="author-item">
+                    Elias Geiger<a href="https://orcid.org/0009-0004-3537-4296" target="_blank" class="orcid-link"><img
+                            src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD"
+                            class="orcid-icon"></a>
+                </span>,
+                <span class="author-item">
+                    Jakob Häringer<a href="https://orcid.org/0009-0004-7003-0106" target="_blank"
+                        class="orcid-link"><img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg"
+                            alt="ORCID iD" class="orcid-icon"></a>
+                </span>,
+                <span class="author-item">
+                    Dennis Grewe<a href="https://orcid.org/0000-0002-9318-5424" target="_blank" class="orcid-link"><img
+                            src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD"
+                            class="orcid-icon"></a>
+                </span>,
+                <span class="author-item">
+                    Markus Enzweiler<a href="https://orcid.org/0000-0001-9211-9882" target="_blank"
+                        class="orcid-link"><img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg"
+                            alt="ORCID iD" class="orcid-icon"></a>
+                </span>
+            </div>
+        </header>
+
+        <div class="button-container">
+            <a download class="button disabled" title="Download Paper">
+                <img src="assets/icons/pdf.svg" alt="PDF logo" class="icon button-icon">
+                <span class="button-text">Paper</span>
+            </a>
+            <a class="button disabled" title="arXiv (Coming Soon)">
+                <img src="assets/logos/arxiv.svg" alt="arXiv logo" class="icon button-icon">
+                <span class="button-text">arXiv</span>
+            </a>
+            <a class="button disabled" title="View Code">
+                <img src="assets/logos/github.svg" alt="GitHub logo" class="icon button-icon">
+                <span class="button-text">Code</span>
+            </a>
+        </div>
+
+        <main>
+            <section id="abstract">
+                <h2>Abstract</h2>
+                <p>
+                    Deploying heterogeneous multi-agent fleets for collaborative perception requires robust data
+                    exchange and scalable software architectures. However, standard ROS 2 implementations often suffer
+                    from network saturation, namespace collisions, and severe computational overhead when distributing
+                    dense sensor streams across devices. To address these bottlenecks, we present SFG-ROS, a
+                    resource-aware multi-agent software framework designed for dynamic fleet deployments. SFG-ROS
+                    addresses these challenges through three primary contributions. First, schema-driven traffic routing
+                    isolates high-frequency intra-agent traffic from the global network using a programmatic fully
+                    qualified name schema and targeted Fast DDS routing. Second, an on-demand centralized decoding
+                    pipeline automatically offloads high-bandwidth sensor data decompression, eliminating redundant
+                    processing across local consumer nodes. Finally, a hardware-agnostic container pipeline dynamically
+                    adapts to heterogeneous accelerators, seamlessly bridging development environments with zero-touch,
+                    field-ready execution. We evaluate the framework using a fleet of wheeled and legged robots equipped
+                    with LiDAR and stereo depth cameras. Experimental results show SFG-ROS bounds network traffic to
+                    $\mathcal{O}(1)$ and, by replacing redundant decompression with lightweight IPC, reduces the
+                    per-subscriber CPU scaling penalty by $72.3\%$ versus standard ROS 2, all while maintaining low
+                    latency.
+                </p>
+            </section>
+
+            <section id="citation">
+                <h2>BibTeX</h2>
+                <div class="bibtex-wrapper">
+                    <button id="copy-button" onclick="copyBibTeX()" title="Copy Citation">
+                        <img src="assets/icons/copy.svg" alt="Copy icon" class="copy-icon">
+                    </button>
+                    <pre><code id="bibtex-code">@article{blessing2026sfgros,
+  title={SFG-ROS: Resource-Aware Multi-Agent Perception for Dynamic Factory Deployments},
+  author={Blessing, Constantin and Geiger, Elias and H{\"a}ringer, Jakob and Grewe, Dennis and Enzweiler, Markus},
+  journal={arXiv preprint arXiv:26xx.xxxxx},
+  year={2026}
+}</code></pre>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
