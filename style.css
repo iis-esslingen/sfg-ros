@@ -23,23 +23,30 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 2.2rem;
     letter-spacing: -0.02em;
     line-height: 1.2;
 }
 
 h2 {
-    font-size: 1.2rem;
     color: var(--text-muted-color);
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 0.5rem;
-    margin-top: 3rem;
+}
+
+.institution-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.institution-logos img {
+    max-height: 75px;
+    width: auto;
 }
 
 .authors {
     text-align: center;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
 }
 
 .author-item {
@@ -57,15 +64,12 @@ h2 {
     width: 16px;
 }
 
-.institution-logos {
+.funding {
+    color: var(--text-muted-color);
+    text-align: center;
     display: flex;
     justify-content: center;
-    gap: 30px;
-}
-
-.institution-logos img {
-    max-height: 75px;
-    width: auto;
+    margin-bottom: 1rem;
 }
 
 .button-container {
@@ -85,7 +89,6 @@ h2 {
     max-width: 50px;
     border-radius: 25px;
     font-weight: 600;
-    font-size: 1.2rem;
     transition: max-width 0.4s, background-color 0.3s;
     overflow: hidden;
 }
@@ -115,7 +118,6 @@ h2 {
     opacity: 0;
     transform: translateX(-10px);
     transition: all 0.3s ease 0.1s;
-    font-size: 0.95rem;
     padding-right: 25px;
 }
 
@@ -148,7 +150,6 @@ h2 {
 
 .bibtex-wrapper code {
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-    font-size: 0.9rem;
     color: var(--text-muted-color);
     line-height: 1.45;
 }
