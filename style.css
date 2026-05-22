@@ -100,8 +100,15 @@ h2 {
     overflow: hidden;
 }
 
-.button:hover {
+.button:hover,
+.tooltip-wrapper:hover .button {
     max-width: 200px;
+}
+
+.button:hover .button-text,
+.tooltip-wrapper:hover .button-text {
+    opacity: 1;
+    transform: translateX(5px);
 }
 
 .button .icon {
@@ -126,11 +133,6 @@ h2 {
     transform: translateX(-10px);
     transition: all 0.3s ease 0.1s;
     padding-right: 25px;
-}
-
-.button:hover .button-text {
-    opacity: 1;
-    transform: translateX(5px);
 }
 
 .button.disabled {
