@@ -40,6 +40,11 @@ h2 {
     gap: 30px;
 }
 
+.institution-logos a {
+    display: flex;
+    align-items: center;
+}
+
 .institution-logos img {
     max-height: 75px;
     max-width: 100%;
